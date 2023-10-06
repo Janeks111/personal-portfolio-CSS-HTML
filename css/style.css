@@ -8,6 +8,7 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   line-height: 1.5;
+  background-image: url(/images/dark-honeycomb.png);
 }
 
 h1,
@@ -46,6 +47,28 @@ p {
 
 /* Add a color to the active/current link */
 .nav-bar a.active {
-  background-color: #04aa6d;
+  background-color: #9f98af;
   color: white;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+}
+.nav-bar h1 {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  font-weight: 500px;
+  margin-left: 0.83rem;
+  justify-content: center;
+}
+#navigation {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: right;
+}
+#navigation a {
+  cursor: pointer;
+  text-decoration: none;
 }
