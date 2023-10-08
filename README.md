@@ -12,9 +12,9 @@ Here is the screenshot of deployed application:
 ![Personal Portfolio](/images/Screenshot%202023-10-08%20at%2019.31.01.png)
 ![](/images/Screenshot%202023-10-08%20at%2019.31.33.png)
 
-Deployed application:
+Deployed application: https://janeks111.github.io/personal-portfolio-CSS-HTML/
 
-Repository:
+Repository: https://github.com/Janeks111/personal-portfolio-CSS-HTML
 
 ## Installation
 
