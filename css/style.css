@@ -1,7 +1,9 @@
+/* Set box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
 
+/* Reset browser styles */
 body {
   margin: 0;
   padding: 0;
@@ -10,6 +12,7 @@ body {
   line-height: 1.5;
 }
 
+/* Reset margin for all heading tags */
 h1,
 h2,
 h3,
@@ -19,23 +22,28 @@ h6 {
   margin: 0;
 }
 
+/* Reset margin for paragraphs */
 p {
   margin: 0;
 }
 /* Add a black background color to the top navigation */
+/* Navbar container */
 .nav-bar {
   background-color: #686577;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Style the links inside the navigation bar */
 .nav-bar a {
-  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Change the color of links on hover */
@@ -49,37 +57,38 @@ p {
   background-color: #9f98af;
   color: white;
 }
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-}
+
+/* Navbar h1 styling */
 .nav-bar h1 {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
   color: #ead1e9;
   font-weight: 500px;
   margin-left: 0.83rem;
-  justify-content: center;
 }
+
+/* Navigation container */
 #navigation {
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: right;
 }
+
+/* Define navigation link style */
 #navigation a {
   cursor: pointer;
   text-decoration: none;
 }
+
 /*Banner*/
+
+/* Hero banner styling */
 .hero-banner {
   position: relative;
   background-image: url(/images/banner-img.jpg);
   background-repeat: no-repeat;
   height: 300px;
-  margin-top: 0;
 }
+
+/* Hero banner heading */
 .hero-banner h2 {
   color: #1d1d1f;
   position: absolute;
@@ -87,16 +96,20 @@ p {
   right: 16px;
   font-size: 38px;
 }
+
+/* About section styling */
 #about {
   margin: 0px 5%;
-  padding: 30px 0 30px 0;
+  padding: 30px 0;
   display: grid;
   grid-template-rows: repeat(2, auto);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "aboutMe aboutContent aboutPara"
     "aboutMe aboutContent aboutPara";
 }
+
+/*About me styling*/
 #about h2 {
   grid-area: aboutMe;
   border-right: 6px solid #ead1e9;
@@ -104,6 +117,8 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+/* About paragraph styling */
 #about p {
   grid-area: aboutPara;
   display: flex;
@@ -112,6 +127,8 @@ p {
   text-align: center;
   padding-top: 100px;
 }
+
+/*Profile picture styling*/
 #profilePicture {
   margin-left: 30px;
   grid-area: aboutContent;
@@ -119,12 +136,13 @@ p {
   width: 300px;
 }
 
+/*Portfolio styling*/
 #projectGrid {
   margin: 0px 5%;
   margin-bottom: 30px;
   display: grid;
   grid-template-rows: repeat(4, 200px);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "work projectOne projectOne"
     "work projectOne projectOne"
@@ -132,6 +150,7 @@ p {
     "work projectFore projectFive";
 }
 
+/*Section header styling*/
 #work {
   grid-area: work;
   border-right: 6px solid #ead1e9;
@@ -139,6 +158,8 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+/*Styling for portfolio links and images*/
 .projectGridArea {
   position: relative;
   display: flex;
@@ -192,28 +213,32 @@ p {
   opacity: 1;
 }
 
-#projectOne {
-  grid-area: projectOne;
+#projectOne,
+#projectTwo,
+#projectThree,
+#projectFore,
+#projectFive {
   margin-left: 30px;
 }
+
+#projectOne {
+  grid-area: projectOne;
+}
+
 #projectTwo {
   grid-area: projectTwo;
-  margin-left: 30px;
 }
 
 #projectThree {
   grid-area: projectThree;
-  margin-left: 30px;
 }
 
 #projectFore {
   grid-area: projectFore;
-  margin-left: 30px;
 }
 
 #projectFive {
   grid-area: projectFive;
-  margin-left: 30px;
 }
 
 .projectGridArea .heading {
@@ -224,6 +249,7 @@ p {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 /* Footer Styles */
 .footer {
   display: flex;
@@ -233,18 +259,14 @@ p {
   text-align: center;
   position: relative;
 }
+
 .footer h2 {
   background-color: #686577;
   padding: 10px;
   margin: 0;
 }
-.links {
-  display: flex;
-  justify-content: center;
-}
-.gh,
-.ig,
-.mail {
+
+.socialLinks a {
   display: inline-block;
   margin: 20px;
   font-size: 1rem;
@@ -253,21 +275,24 @@ p {
   color: #ead1e9;
 }
 
+/*Responsive design styling*/
 @media only screen and (max-width: 1000px) {
   #about {
     grid-template-rows: repeat(3, auto);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "aboutMe aboutContent "
       "aboutMe aboutContent "
       "aboutMe aboutPara";
   }
+
   #about p {
     padding-top: 20px;
   }
+
   #projectGrid {
     grid-template-rows: repeat(6, 200px);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "work projectOne"
       "work projectOne"
@@ -289,12 +314,15 @@ p {
       "aboutPara";
     place-items: center;
   }
+
   #about h2 {
     border-right: none;
   }
+
   #about p {
     padding-top: 20px;
   }
+
   #projectGrid {
     grid-template-rows: repeat(7, 200px);
     grid-template-columns: 1fr;
@@ -308,14 +336,16 @@ p {
       "projectFive";
     place-items: center;
   }
+
   #work {
     border-right: none;
   }
+
   #projectOne,
   #projectTwo,
   #projectThree,
   #projectFore,
   #projectFive {
-    margin-left: none;
+    margin-left: 0;
   }
 }
