@@ -88,7 +88,7 @@ p {
 /* Hero banner styling */
 .hero-banner {
   position: relative;
-  background-image: url(./images/banner-img.jpg);
+  background-image: url(../images/banner-img.jpg);
   background-repeat: no-repeat;
   height: 300px;
 }
