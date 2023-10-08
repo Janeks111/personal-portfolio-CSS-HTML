@@ -1,3 +1,8 @@
+/*Repeted values*/
+:root {
+  --dark: #686577;
+  --pink: #ead1e9;
+}
 /* Set box-sizing to border-box */
 * {
   box-sizing: border-box;
@@ -29,7 +34,7 @@ p {
 /* Add a black background color to the top navigation */
 /* Navbar container */
 .nav-bar {
-  background-color: #686577;
+  background-color: var(--dark);
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -60,7 +65,7 @@ p {
 
 /* Navbar h1 styling */
 .nav-bar h1 {
-  color: #ead1e9;
+  color: var(--pink);
   font-weight: 500px;
   margin-left: 0.83rem;
 }
@@ -112,7 +117,7 @@ p {
 /*About me styling*/
 #about h2 {
   grid-area: aboutMe;
-  border-right: 6px solid #ead1e9;
+  border-right: 6px solid var(--pink);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,7 +134,7 @@ p {
 }
 
 /*Profile picture styling*/
-#profilePicture {
+#profile-picture {
   margin-left: 30px;
   grid-area: aboutContent;
   height: 400px;
@@ -137,7 +142,7 @@ p {
 }
 
 /*Portfolio styling*/
-#projectGrid {
+#old-projects {
   margin: 0px 5%;
   margin-bottom: 30px;
   display: grid;
@@ -153,7 +158,7 @@ p {
 /*Section header styling*/
 #work {
   grid-area: work;
-  border-right: 6px solid #ead1e9;
+  border-right: 6px solid var(--pink);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,7 +190,7 @@ p {
   display: block;
   position: relative;
   text-align: center;
-  color: #ead1e9;
+  color: var(--pink);
 }
 
 /* Set image width to 100% */
@@ -250,7 +255,7 @@ p {
 /* Define project grid area heading styles */
 .projectGridArea .heading {
   background-color: rgba(0, 0, 0, 0.7);
-  color: #ead1e9;
+  color: var(--pink);
   padding: 10px;
   margin-top: auto;
   text-decoration: none;
@@ -262,13 +267,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #686577;
+  background-color: var(--dark);
   text-align: center;
   position: relative;
 }
 
 .footer h2 {
-  background-color: #686577;
+  background-color: var(--dark);
   padding: 10px;
   margin: 0;
 }
@@ -279,7 +284,7 @@ p {
   font-size: 1rem;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: #ead1e9;
+  color: var(--pink);
 }
 
 /*Responsive design styling*/
@@ -297,7 +302,7 @@ p {
     padding-top: 20px;
   }
 
-  #projectGrid {
+  #old-projects {
     grid-template-rows: repeat(6, 200px);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -330,7 +335,7 @@ p {
     padding-top: 20px;
   }
 
-  #projectGrid {
+  #old-projects {
     grid-template-rows: repeat(7, 200px);
     grid-template-columns: 1fr;
     grid-template-areas:
